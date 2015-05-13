@@ -21,8 +21,8 @@ difference() {
         translate([x, 0, -1]) cylinder(r=fastnerRadius, h=wallThickness*2);
     }
     rotate([90, 0, 0]) {
-        for (x = [smaHeadRadius/2 : smaHeadRadius*3 : smaHeadRadius*10]) {
-            translate([x, wallThickness+smaHeadRadius*2, 0]) cylinder(r=smaRadius, h=100);
+        for (x = [-peekSpacing : peekSpacing*2/3 : peekSpacing]) {
+            translate([x+peekSpacing, wallThickness+smaHeadRadius+fastnerHeadHeight, 0]) cylinder(r=smaRadius, h=100);
         }
     }
 }
