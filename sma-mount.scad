@@ -7,7 +7,8 @@ smaRadius = 3;
 smaHeadRadius = 5;
 
 blockWidth  = peekSpacing*2 + wallThickness*2;
-blockHeight = wallThickness + smaHeadRadius*2 + fastnerHeadHeight;
+blockHeight = wallThickness + smaHeadRadius*2;
+echo(blockHeight=blockHeight);
 blockDepth  = wallThickness + fastnerHeadRadius*3;
 
 difference() {
@@ -21,8 +22,8 @@ difference() {
         translate([x, 0, -1]) cylinder(r=fastnerRadius, h=wallThickness*2);
     }
     rotate([90, 0, 0]) {
-        for (x = [-peekSpacing : peekSpacing*2/3 : peekSpacing]) {
-            translate([x+peekSpacing, wallThickness+smaHeadRadius+fastnerHeadHeight, 0]) cylinder(r=smaRadius, h=100);
+        for (x = [-peekSpacing*3/4 : peekSpacing*2/4 : peekSpacing*3/4]) {
+            translate([x+peekSpacing, wallThickness+smaHeadRadius, 0]) cylinder(r=smaRadius, h=100);
         }
     }
 }
