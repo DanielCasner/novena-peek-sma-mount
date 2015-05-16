@@ -3,7 +3,7 @@ wallThickness = 3;
 fastnerRadius = 2;
 fastnerHeadRadius = 4;
 fastnerHeadHeight = 3;
-smaRadius = 3;
+smaRadius = 3.5;
 smaHeadRadius = 5;
 
 blockWidth  = peekSpacing + wallThickness*2;
